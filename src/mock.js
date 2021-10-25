@@ -16,7 +16,7 @@ export const data = [
         
     },
     {
-        id:1,
+        id:3,
         name:"Raimjon",
         address:"Archa ko'cha",
         email:'raimjon@MediaList.ru',
@@ -24,7 +24,7 @@ export const data = [
         
     },
     {
-        id:1,
+        id:4,
         name:"Akmal",
         address:"Niyozov kocha",
         email:'akmal@MediaList.ru',
@@ -32,7 +32,7 @@ export const data = [
         
     },
     {
-        id:1,
+        id:5,
         name:"Olimjon",
         address:"olmaloq kocha",
         email:'olimjon@MediaList.ru',
