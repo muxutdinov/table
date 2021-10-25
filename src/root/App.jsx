@@ -31,15 +31,7 @@ export const App = () => {
 
     setAddFormData(newFormData);
   };
-  const handleEditFormChange = (e) => {
-    e.preventDefault();
-    const fieldName = e.target.getAttribute("name");
-    const fieldValue = e.target.value;
 
-    const newFormData = { ...editFormData };
-    newFormData[fieldName] = fieldValue;
-    setEditFormData(newFormData);
-  };
 
   const handleAddFormSubmit = (e) => {
     e.preventDefault();
@@ -54,6 +46,18 @@ export const App = () => {
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
   };
+
+
+  const handleEditFormChange = (e) => {
+    e.preventDefault();
+    const fieldName = e.target.getAttribute("name");
+    const fieldValue = e.target.value;
+
+    const newFormData = { ...editFormData };
+    newFormData[fieldName] = fieldValue;
+    setEditFormData(newFormData);
+  };
+
   const handleEditClick = (e, contact) => {
     e.preventDefault();
     setEditContactId(contact.id);
@@ -132,17 +136,17 @@ export const App = () => {
         </table>
       </form>
       <h3>Add new contact</h3>
-      <form Submit={handleAddFormSubmit}>
+      <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
-          name="fullname"
+          name="name"
           required="required"
           placeholder="Enter a name"
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="Address"
+          name="address"
           required="required"
           placeholder="Enter an address"
           onChange={handleAddFormChange}
